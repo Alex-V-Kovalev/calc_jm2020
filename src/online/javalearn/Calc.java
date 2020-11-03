@@ -38,7 +38,7 @@ public class Calc {
                 throw new InvalidFormatException("unknown operator");
         }
 
-        System.out.println(type == TypeOperand.Arabic ? result : RomanNumber.arabicToRoman(result));
+        System.out.println((type == TypeOperand.Arabic) ? result : RomanNumber.arabicToRoman(result));
 
         br.close();
 
