@@ -19,7 +19,7 @@ public class Operand {
         }
     }
 
-    public static boolean isRoman(String s) {
+    private static boolean isRoman(String s) {
         for (char c :
                 s.toLowerCase().toCharArray()) {
             if (c != 'i' && c != 'v' && c != 'x') return false;
@@ -27,7 +27,7 @@ public class Operand {
         return true;
     }
 
-    public static boolean isArabic(String s) {
+    private static boolean isArabic(String s) {
         char[] c = s.toCharArray();
 
         int len = s.length();
@@ -48,6 +48,6 @@ public class Operand {
 
     @Override
     public String toString() {
-        return "Value Arabic is " + value + ", Roman is " + RomanNumber.arabicToRoman(value) + " Type is " + type;
+        return type == TypeOperand.Arabic ? Integer.toString(value) : RomanNumber.arabicToRoman(value);
     }
 }
