@@ -19,6 +19,14 @@ public class Operand {
         }
     }
 
+    public int getValue() {
+        return value;
+    }
+
+    public TypeOperand getType() {
+        return type;
+    }
+
     private static boolean isRoman(String s) {
         for (char c :
                 s.toLowerCase().toCharArray()) {
