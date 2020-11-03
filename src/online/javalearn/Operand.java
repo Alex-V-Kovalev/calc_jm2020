@@ -1,8 +1,8 @@
 package online.javalearn;
 
 public class Operand {
-    int value;
-    TypeOperand type;
+    private int value;
+    private TypeOperand type;
 
 //    public Operand(int value, TypeOperand type) {
 //        this.value = value;
