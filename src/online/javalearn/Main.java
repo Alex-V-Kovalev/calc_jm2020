@@ -1,12 +1,11 @@
 package online.javalearn;
 
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // write your code here
-        Operand a = new Operand("1234");
-        System.out.println(a);
-        Operand b = new Operand("XXXXVIII");
-        System.out.println(b);
+        Calc.main(args);
     }
 }

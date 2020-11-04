@@ -30,7 +30,8 @@ public class Operand {
     private static boolean isRoman(String s) {
         for (char c :
                 s.toLowerCase().toCharArray()) {
-            if (c != 'i' && c != 'v' && c != 'x') return false;
+            if (c != 'i' && c != 'v' && c != 'x')
+                return false;
         }
         return true;
     }
@@ -46,6 +47,8 @@ public class Operand {
 
             if (len == 1) // Cannot have lone "+" or "-"
                 throw new NumberFormatException(s);
+        } else if (firstChar > '9') {
+            return false;
         }
         for (int i = 1; i < len; i++) {
             if (c[i] < '0' || c[i] > '9')

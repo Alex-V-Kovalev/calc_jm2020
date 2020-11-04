@@ -38,7 +38,7 @@ public class Calc {
                 throw new InvalidFormatException("unknown operator");
         }
 
-        System.out.println((type == TypeOperand.Arabic) ? result : RomanNumber.arabicToRoman(result));
+        System.out.println(type == TypeOperand.Arabic ? result : RomanNumber.arabicToRoman(result));
 
         br.close();
 
@@ -53,6 +53,10 @@ public class Calc {
         a = new Operand(strings[0]);
         oper = strings[1];
         b = new Operand(strings[2]);
+        int aVal = a.getValue();
+        int bVal = b.getValue();
+        if ( aVal < 1 || aVal > 10 || bVal < 1 || bVal > 10)
+            throw new IllegalArgumentException("operand must be greater than 1 and less than 10");
         if (a.getType() != b.getType()) {
             throw new InvalidFormatException("both operands must be of same type");
         } else type = a.getType();
